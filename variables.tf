@@ -36,7 +36,7 @@ variable "subnet_id" {
 
 variable "instance_count" {}
 
-#variable "subnet_1_tag" {}
+variable "subnet_1_tag" {}
 
 variable "subnet_2_tag" {}
 
@@ -56,3 +56,8 @@ variable "default_tags" {
   }
 }
 
+variable "key" {}
+
+variable "dynamodb_table" {}
+
+variable "bucket" {}
