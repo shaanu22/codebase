@@ -1,18 +1,30 @@
-variable "region" {}
+variable "region" {
+  default = "us-east-1"
+}
 
-variable "vpc_cidr" {}
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
+}
 
-variable "subnet_1_cidr" {}
+variable "subnet_1_cidr" {
+  default = "10.0.1.0/24"
+}
 
-variable "subnet_2_cidr" {}
+variable "subnet_2_cidr" {
+  default = "10.0.2.0/24"
+}
 
 variable "my_ip_cidr" {}
 
-variable "instance_ami" {}
+variable "instance_ami" {
+  default = "ami-0f34c5ae932e6f0e4"
+}
 
 variable "instance_keyname" {}
 
-variable "instance_type" {}
+variable "instance_type" {
+  default = "t2.micro"
+}
 
 variable "dynamodb_statelock" {
   type = string
@@ -30,7 +42,7 @@ variable "subnet_2_tag" {}
 
 variable "availability_zones" {
   type    = list(string)
-  default = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+  default = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
 variable "default_tags" {
@@ -43,3 +55,9 @@ variable "default_tags" {
     "Can_destroy" = "yes"
   }
 }
+
+variable "key" {}
+
+variable "dynamodb_table" {}
+
+variable "bucket" {}

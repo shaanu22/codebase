@@ -8,5 +8,4 @@ resource "aws_instance" "instance" {
   security_groups             = [aws_security_group.instance_sg.id]
   user_data                   = file("instance_user_data.sh")
   tags                        = var.default_tags
-
 }
